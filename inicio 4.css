@@ -34,6 +34,7 @@ body {
 /* MENÚ */
 .menu {
     background-color: #0B0F29;
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -173,5 +174,6 @@ h2 {
     }
 
 }
+
 
 
