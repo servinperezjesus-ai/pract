@@ -1,0 +1,179 @@
+/* ----------- ESTILOS GENERALES ----------- */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f4f7f9;
+    color: #222;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.imagen-encabezado {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.texto-encabezado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texto-encabezado h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.texto-encabezado p {
+    font-size: 1.1em;
+}
+
+/* MENÚ */
+.menu {
+    background-color: #004aad;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #0077ff;
+}
+
+.menu .activo {
+    background-color: #0077ff;
+}
+
+/* ----------- CONTENIDO Y SECCIONES ----------- */
+.contenido {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 30px;
+}
+
+.mision-vision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.caja {
+    background: white;
+    border-left: 6px solid #0077ff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* PIE */
+.pie {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ----------- ESTILOS CARRUSEL (SIN JAVA) ----------- */
+.carrusel-contenedor {
+    /* Ancho líquido: tomará todo el ancho del .contenido (1000px) */
+    width: 100%;
+    overflow: hidden; /* Oculta las imágenes que no están visibles */
+    margin-bottom: 40px; /* Espacio después del carrusel */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.carrusel-pista {
+    display: flex;
+    /* Ancho de la pista: 5 imágenes * 100% / imagen = 500% */
+    width: 500%;
+    /* 20 segundos para el ciclo completo, con transición lineal e infinita */
+    animation: deslizar 20s linear infinite;
+}
+
+.carrusel-pista img {
+    /* Cada imagen ocupa 1/5 del ancho total de la pista (que es 500%) */
+    width: calc(100% / 5); 
+    height: 350px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Definición de la animación: Mueve la pista horizontalmente */
+@keyframes deslizar {
+    0% {
+        transform: translateX(0); /* Imagen 1 visible */
+    }
+    18% {
+        transform: translateX(0); /* Pausa en Imagen 1 */
+    }
+    23% {
+        transform: translateX(-20%); /* Mover a Imagen 2 */
+    }
+    38% {
+        transform: translateX(-20%); /* Pausa en Imagen 2 */
+    }
+    43% {
+        transform: translateX(-40%); /* Mover a Imagen 3 */
+    }
+    58% {
+        transform: translateX(-40%); /* Pausa en Imagen 3 */
+    }
+    63% {
+        transform: translateX(-60%); /* Mover a Imagen 4 */
+    }
+    78% {
+        transform: translateX(-60%); /* Pausa en Imagen 4 */
+    }
+    83% {
+        transform: translateX(-80%); /* Mover a Imagen 5 */
+    }
+    98% {
+        transform: translateX(-80%); /* Pausa en Imagen 5 */
+    }
+    100% {
+        transform: translateX(0); /* Regresar a Imagen 1 (oculto el salto rápido) */
+    }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .imagen-encabezado {
+        height: 200px;
+    }
+
+    .texto-encabezado h1 {
+        font-size: 1.4em;
+    }
+
+    .caja {
+        width: 100%;
+    }
+    
+    /* Ajuste Responsivo para Carrusel */
+    .carrusel-pista img {
+        height: 250px; /* Reduce la altura en móviles */
+    }
+}
