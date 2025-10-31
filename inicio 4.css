@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background-color: #f4f7f9;
+    background-color: #FF0014;
     color: #222;
 }
 
@@ -38,7 +38,7 @@ body {
 
 /* MENÚ */
 .menu {
-    background-color: #004aad;
+    background-color: #0B0F29;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -52,7 +52,7 @@ body {
 }
 
 .menu a:hover {
-    background-color: #0077ff;
+    background-color: #0B0F29;
 }
 
 .menu .activo {
@@ -90,7 +90,7 @@ h2 {
 
 /* PIE */
 .pie {
-    background-color: #004aad;
+    background-color: #FF0014;
     color: white;
     text-align: center;
     padding: 15px;
@@ -176,4 +176,5 @@ h2 {
     .carrusel-pista img {
         height: 250px; /* Reduce la altura en móviles */
     }
+
 }
